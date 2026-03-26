@@ -10,8 +10,11 @@
       }
     },
     {
-      "src": "backend/package.json",
-      "use": "@vercel/node"
+      "src": "backend/src/server.ts",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30
+      }
     }
   ],
   "routes": [
@@ -26,11 +29,6 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "backend/src/server.ts": {
-      "maxDuration": 30
-    }
   },
   "installCommand": "npm install",
   "buildCommand": "npm run build"
