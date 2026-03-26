@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "cd backend && npm run build",
-  "outputDirectory": "backend/dist",
-  "installCommand": "cd backend && npm install",
   "builds": [
     {
       "src": "backend/src/server.ts",
