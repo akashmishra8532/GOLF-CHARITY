@@ -11,7 +11,7 @@ function must(name: string): string {
 export const env = {
   nodeEnv: process.env.NODE_ENV ?? "development",
   httpPort: Number(process.env.PORT ?? 4000),
-  mongoUri: process.env.MONGODB_URI,
+  mongoUri: must("MONGODB_URI"),
   
   // Supabase configuration
   supabaseUrl: process.env.SUPABASE_URL,
